@@ -45,13 +45,10 @@ public class HelloClientAioHandler implements ClientAioHandler {
 		// 不够消息体长度(剩下的buffe组不了消息体)
 		if (isDataEnough < 0) {
 			return null;
-		} else //组包成功
-		{
+		} else { //组包成功
 			HelloPacket imPacket = new HelloPacket();
 			if (bodyLength > 0) {
-				byte[] dst = new byte[bodyLength];
-				buffer.get(dst);
-				imPacket.setBody(dst);
+				imPacket.setBody(new byte[bodyLength]);
 			}
 			return imPacket;
 		}

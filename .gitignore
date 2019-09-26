@@ -33,4 +33,4 @@ out/
 
 **/.gradle/**
 **/.idea/**
-out/
+**/.out/**

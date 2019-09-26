@@ -36,8 +36,7 @@ public class HelloServerStarter {
 	 * 启动程序入口
 	 */
 	public static void main(String[] args) throws IOException {
-		serverGroupContext.setHeartbeatTimeout(org.tio.examples.helloworld.common.Const.TIMEOUT);
+		serverGroupContext.setHeartbeatTimeout(Const.TIMEOUT);
 		tioServer.start(serverIp, serverPort);
-
 	}
 }

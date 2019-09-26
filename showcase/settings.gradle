@@ -1,0 +1,5 @@
+rootProject.name = 'showcase'
+include 'client'
+include 'common'
+include 'server'
+

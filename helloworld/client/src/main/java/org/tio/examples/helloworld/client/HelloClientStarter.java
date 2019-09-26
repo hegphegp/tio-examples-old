@@ -11,6 +11,8 @@ import org.tio.core.Node;
 import org.tio.examples.helloworld.common.Const;
 import org.tio.examples.helloworld.common.HelloPacket;
 
+import java.util.UUID;
+
 /**
  *
  * @author tanyaowu
@@ -47,8 +49,11 @@ public class HelloClientStarter {
 	}
 
 	private static void send() throws Exception {
-		HelloPacket packet = new HelloPacket();
-		packet.setBody("hello world".getBytes(HelloPacket.CHARSET));
-		Tio.send(clientChannelContext, packet);
+		while (true) {
+			Thread.sleep(300);
+			HelloPacket packet = new HelloPacket();
+			packet.setBody(("hello world"+ UUID.randomUUID().toString()).getBytes(HelloPacket.CHARSET));
+			Tio.send(clientChannelContext, packet);
+		}
 	}
 }

@@ -1,3 +1,4 @@
 rootProject.name = 'tio-examples'
-
-
+include 'helloworld'
+include 'showcase'
+include 'im'

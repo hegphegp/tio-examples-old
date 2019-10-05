@@ -38,8 +38,7 @@ public abstract class ShowcaseAbsAioHandler implements AioHandler {
 
 		int neededLength = ShowcasePacket.HEADER_LENGHT + bodyLength;
 		int test = readableLength - neededLength;
-		if (test < 0) // 不够消息体长度(剩下的buffe组不了消息体)
-		{
+		if (test < 0) { // 不够消息体长度(剩下的buffe组不了消息体)
 			return null;
 		} else {
 			ShowcasePacket imPacket = new ShowcasePacket();

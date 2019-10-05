@@ -1,4 +1,4 @@
-rootProject.name = 'im'
+//rootProject.name = 'im'
 include 'common'
 include 'client'
 include 'server'

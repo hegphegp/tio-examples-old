@@ -1,4 +1,4 @@
-rootProject.name = 'tio-examples'
+rootProject.name = 'tio-examples-old'
 include 'helloworld'
 include 'showcase'
 include 'im'
